@@ -26,9 +26,8 @@ Species in the manuscript:
 Css = ku * Cw / ((ke + g) * (1 - f))
 Exceedance(Cw) = P(Css > thr)
 Cw* = Cw where Exceedance(Cw) = target_exceed (default: 0.05)
- ```
+```
 ---
-
 ## 📁 Repository Contents
 
 TK_Cd_exceedance.R
@@ -50,48 +49,35 @@ Output figures for quick viewing on GitHub:
 exceedance_vs_Cw.png
 
 Css_vs_Cw.png
- ```
+
 ---
 
-
 ## ▶️ Usage
-1) Install R packages
 
+### 1) Install R packages
 Open R / RStudio and run:
 
+```text
 install.packages(c("readxl","dplyr","ggplot2","scales"))
+```
 
-2) Run the script
+### 2) Run the script
+Download this repository and open `TK_Cd_exceedance.R` in RStudio.
+Set the target species by specifying the Excel sheet name:
 
-Option A (interactive): if your script uses file.choose()
+```text
+dat0 <- read_excel("Supporting data.xlsx", sheet = "SPECIES_NAME")
+```
+Replace "SPECIES_NAME" with:
+"A. kagoshimensis" or "T. granosa"
 
-source("TK_Cd_exceedance.R")
-
-
-When prompted, select Supporting data.xlsx.
-
-Option B (fully reproducible; recommended): use a fixed input path
-In TK_Cd_exceedance.R, replace:
-
-dat0 <- read_excel(file.choose())
-
-
-with:
-
-dat0 <- read_excel("Supporting data.xlsx")
-
-
-Then run:
-
-source("TK_Cd_exceedance.R")
-
-3) Key settings (edit in the script if needed)
+### 3) Key settings (edit in the script if needed)
 
 Growth dilution: g <- 0.003
 
 Cw grid: Cw_min, Cw_max, Cw_step
 
-Food contribution fraction f (choose one):
+Food contribution fraction (f) (choose one):
 
 Range (propagate uncertainty): f_values <- seq(0.1, 0.9, by = 0.1)
 
@@ -100,8 +86,7 @@ Fixed value (single scenario): f_values <- 0.5
 Tissue threshold: thr <- 2 * 5.96 (example; adjust to your food limit and unit conversion)
 
 Target exceedance: target_exceed <- 0.05
- ```
----
+
 
 
 ## 📊 Outputs
@@ -117,7 +102,7 @@ Css vs Cw (median + uncertainty bands)
 Exceedance vs Cw (with 5% line and Cw*)
 
 Optional CSV export lines are included in the script (commented).
- ```
+
 ---
 
 ## 📝 Notes
