@@ -54,7 +54,7 @@ Css_vs_Cw.png
 ---
 
 
-▶️ Usage
+## ▶️ Usage
 1) Install R packages
 
 Open R / RStudio and run:
@@ -104,7 +104,7 @@ Target exceedance: target_exceed <- 0.05
 ---
 
 
-📊 Outputs
+## 📊 Outputs
 
 Console output:
 
@@ -120,7 +120,7 @@ Optional CSV export lines are included in the script (commented).
  ```
 ---
 
-📝 Notes
+## 📝 Notes
 
 The exceedance curve is expected to be monotonic increasing in Cw. If the target risk (e.g., 5%) is not bracketed by your Cw_min–Cw_max range, the script will return NA.
 
