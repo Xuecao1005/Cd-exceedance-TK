@@ -17,7 +17,7 @@ Beiyun Chen; Guangbin Zhong; **Xue Cao**\*; **Qiao-Guo Tan**\*
 
 ---
 
-## 📄 Overview
+📄 Overview
 Coastal water quality criteria (WQC) protect aquatic life from toxicity, but meeting WQC does not necessarily ensure aquaculture products comply with food safety maximum levels (MLs).  
 This repository provides a **toxicokinetic (TK) inversion** workflow that translates edible-tissue limits into **species-specific seawater Cd thresholds (Cw\*)** at a defined exceedance probability (default: 5%).
 
@@ -31,7 +31,7 @@ Css = ku * Cw / ((ke + g) * (1 - f))
 
 Exceedance(Cw) = P(Css > thr)
 
-📁 Repository Contents
+## 📁 Repository Contents
 
 TK_Cd_exceedance.R
 Main R script for:
@@ -53,7 +53,7 @@ exceedance_vs_Cw.png
 
 Css_vs_Cw.png
 
-▶️ Usage
+## ▶️ Usage
 1) Install R packages
 
 Open R / RStudio and run:
@@ -100,7 +100,7 @@ Tissue threshold: thr <- ... (set to your tissue limit after unit conversion)
 
 Target exceedance: target_exceed <- 0.05
 
-📊 Outputs
+## 📊 Outputs
 
 Console output:
 
